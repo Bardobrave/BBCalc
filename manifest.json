@@ -1,0 +1,15 @@
+{
+  "name": "Calculadora de jugadas para Blood Bowl",
+  "short_name": "BBCalc",
+  "icons": [
+    {
+      "src": "assets/img/down.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    }
+  ],
+  "theme_color": "#FFF",
+  "background_color": "#FFF",
+  "display": "standalone",
+  "orientation": "landscape"
+}
