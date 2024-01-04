@@ -178,7 +178,7 @@ function go() {
 					colorClass = "bluish linkable";
 			}
 			
-			nuevaTirada.innerHTML = '<img id="dadoTirada_' + roll + '" src="img/'
+			nuevaTirada.innerHTML = '<img id="dadoTirada_' + roll + '" src="assets/img/'
 				+ diceSides[newPlay.tiradas[roll].image] + '.png" class="diceImage mx-auto '
 				+ colorClass + '" />';
 			
