@@ -1,0 +1,28 @@
+.diceRoll {
+	cursor:pointer;
+	float:left;
+}
+
+.grupoDados {
+	width:100%;
+	/*border:1px solid black;*/
+	float:left;
+	margin-top:15px;
+}
+
+#porcentaje {
+	font-size:25pt;
+	font-weight:bolder;
+}
+
+#deleteButtonContainer {
+	text-align:right;
+}
+
+.reddish {
+	border: 1px solid #f00;
+}
+
+.bluish {
+	border: 1px solid #00f;
+}

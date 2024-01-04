@@ -1,0 +1,129 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  
+  <!--link href="https://clubsemperludens.com/BBCalc/css/calculadora.css" rel="stylesheet"-->
+  <link href="assets/css/calculadora.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="jugada.js"></script>
+  <script type="text/javascript" src="calculadora.js"></script>
+</head>
+
+
+<body>
+  <div id="main" class="container card col-11">
+    <div class="card-body">
+      <h4 class="card-title">
+        Bienvenidos a la calculadora de jugadas:
+      </h4>
+
+      <div class="grupoDados">
+		  <div value="2" type="oneDice" class="diceRoll col-2 text-center">
+			<img src="assets/img/dos.png" class="diceImage mx-auto" alt="2" title="2 ó más"/>
+			<!--img src="https://clubsemperludens.com/BBCalc/img/dos.png" class="diceImage mx-auto" alt="2" /-->
+		  </div>
+		  <div value="3" type="oneDice" class="diceRoll col-2 text-center">
+			<img src="assets/img/tres.png" class="diceImage mx-auto" alt="3" title="3 ó más"/>
+			<!--img src="https://clubsemperludens.com/BBCalc/img/img/tres.png" class="diceImage mx-auto" alt="3" /-->
+		  </div>
+		  <div value="4" type="oneDice" class="diceRoll col-2 text-center">
+			<img src="assets/img/cuatro.png" class="diceImage mx-auto" alt="4" title="4 ó más"/>
+			<!--img src="https://clubsemperludens.com/BBCalc/img/cuatro.png" class="diceImage mx-auto" alt="4" /-->
+		  </div>
+		  <div value="5" type="oneDice" class="diceRoll col-2 text-center">
+			<!--img src="https://clubsemperludens.com/BBCalc/img/cinco.png" class="diceImage mx-auto" alt="5" /-->
+			<img src="assets/img/cinco.png" class="diceImage mx-auto" alt="5" title="5 ó más"/>
+		  </div>
+		  <div value="6" type="oneDice" class="diceRoll col-2 text-center">
+			<!--img src="https://clubsemperludens.com/BBCalc/img/seis.png" class="diceImage mx-auto" alt="6" /-->
+			<img src="assets/img/seis.png" class="diceImage mx-auto" alt="6" title="6 ó más"/>
+		  </div>
+	  </div>
+	  <div class="grupoDados">
+		  <div value="" type="block" numDice="3" typeBlock="Dis" class="diceRoll col-2 text-center">
+			<!--img src="https://clubsemperludens.com/BBCalc/img/3blockrivalchoose.png" class="diceImage mx-auto" alt="3mal" /-->
+			<img src="assets/img/3blockrivalchoose.png" class="diceImage mx-auto" alt="3mal" title="Tres dados y elige el rival"/>
+		  </div>
+		  <div value="" type="block" numDice="2" typeBlock="Dis" class="diceRoll col-2 text-center">
+			<!--img src="https://clubsemperludens.com/BBCalc/img/2blockrivalchoose.png" class="diceImage mx-auto" alt="2mal" /-->
+			<img src="assets/img/2blockrivalchoose.png" class="diceImage mx-auto" alt="2mal" title="Dos dados y elige el rival"/>
+		  </div>
+		  <div value="" type="block" numDice="1" typeBlock="Ad" class="diceRoll col-2 text-center">
+			<!--img src="https://clubsemperludens.com/BBCalc/img/block.png" class="diceImage mx-auto" alt="uno" /-->
+			<img src="assets/img/block.png" class="diceImage mx-auto" alt="uno" title="Un dado"/>
+		  </div>
+		  <div value="" type="block" numDice="2" typeBlock="Ad" class="diceRoll col-2 text-center">
+			<!--img src="https://clubsemperludens.com/BBCalc/img/2blockyouchoose.png" class="diceImage mx-auto" alt="2bien" /-->
+			<img src="assets/img/2blockyouchoose.png" class="diceImage mx-auto" alt="2bien" title="Dos dados y eliges"/>
+		  </div>
+		  <div value="" type="block" numDice="3" typeBlock="Ad" class="diceRoll col-2 text-center">
+			<!--img src="https://clubsemperludens.com/BBCalc/img/3blockyouchoose.png" class="diceImage mx-auto" alt="3bien" /-->
+			<img src="assets/img/3blockyouchoose.png" class="diceImage mx-auto" alt="3bien" title="Tres dados y eliges"/>
+		  </div>
+	  </div>
+	  <div value="" type="twoDice" class="diceRoll col-2 text-center">
+		<!--img src="https://clubsemperludens.com/BBCalc/img/twoDice.png" class="diceImage mx-auto" alt="2dados" /-->
+		<img src="assets/img/twoDice.png" class="diceImage mx-auto" alt="2dados" title="Dos dados"/>
+	  </div>
+    </div>
+  </div>
+  <div id="controllers" class="container card-footer col-11">
+    <div class="form-check form-switch">
+      <input type="checkbox" id="RR" class="form-check-input" />
+      <label id="etiqueta" class="form-check-label" for="RR">SIN REROLL</label>
+      <button class="btn btn-primary right" id="restart">Reiniciar</button>
+    </div>
+  </div>
+
+  <div id="tirada" class="container card col-11">
+    <h5 class="card-title">
+      Tirada a calcular
+    </h5>
+    <div id="tiradaValues" class="card-body">
+    </div>
+  </div>
+
+  <div id="result" class="container card col-11 text-center">
+    <h5 class="card-title">
+      Probabilidad
+    </h5>
+    <div id="porcentaje" class="card-body">
+      100 %
+    </div>
+  </div>
+  
+  <div class="modal" id="tiradaModal" currentTirada="">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Características de la tirada</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="cerrar"></button>
+			</div>
+			<div class="modal-body">
+				<p>Características de la tirada</p>
+				<div class="form-check form-switch">
+					<input type="checkbox" id="repetible" class="form-check-input" />
+					<label id="etiquetaRepetible" class="form-check-label" for="repetible">La tirada no es repetible</label>
+				</div>
+				<div id="enlazadaContainer" class="form-check form-switch">
+					<input type="checkbox" id="enlazada" class="form-check-input" />
+					<label id="etiquetaEnlazada" class="form-check-label" for="enlazada">La tirada no está enlazada</label>
+					<div id="enlazablesContainer"></div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-between">
+				<div class="col-4">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+				<div id="deleteButtonContainer" class="col-4">
+					<button id="deleteButton" type="button" class="btn btn-danger">BORRAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+  <script>
+	go();
+  </script>
+
+</body></html>
