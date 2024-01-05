@@ -26,3 +26,13 @@
 .bluish {
 	border: 1px solid #00f;
 }
+
+.comentario {
+	font-size: 0.8em;
+	padding-left:15px;
+}
+
+.sidebyside {
+	width:50%;
+	float:left;
+}
