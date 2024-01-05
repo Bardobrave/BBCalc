@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  
+  <!--link href="https://clubsemperludens.com/BBCalc/css/calculadora.css" rel="stylesheet"-->
+  <link href="assets/css/calculadora.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="main" class="container card col-11">
+    <div class="card-body">
+      <h4 class="card-title">
+        Ayuda
+      </h4>
+
+	  <div class="grupoDados">
+	    <h5>Funcionamiento de la calculadora</h5>
+		<p>Hay tres hileras de imágenes con los posibles tipos de tiradas a incluir en tu cálculo: valores numéricos a obtener en una tirada (de 2+ a 6+), tiradas de dados de placaje (de 3 calaveras, que serían 
+		3 dados eligiendo tu rival, a 3 estallidos, que serían 3 dados eligiendo tú) y tiradas de dos dados de 6.</p>
+		
+		<p>Cada vez que se hace click en uno de los iconos se incorpora la posibilidad de esa tirada al cálculo completo de la jugada y se recalcula la probabilidad global de éxito. Si estás escogiendo un tipo de 
+		tirada de dados de placaje la aplicación te preguntará cuántas caras de los dados te sirven para considerar la tirada exitosa (si sólo me sirven estallidos escribiré 1, si me sirven estallidos y placajes 
+		escribiré 2, y así...), y si estás escogiendo una tirada de dos dados, la aplicación te preguntará por el valor a obtener en ambos dados (así, si necesito una tirada de 8+ para romper una armadura, 
+		por ejemplo, escribiré 8).</p>
+		
+		<div>
+			<div class="sidebyside"><img src="assets/helpScreens/screen1.png" ></div>
+			<div class="sidebyside">
+				<p class="comentario"> En esta pantalla se puede ver cómo hemos hecho click en el 3, los dos estallidos (donde hemos indicado 3 resultados válidos) y los dos dados (donde hemos indicado el 8 como 
+				valor objetivo), la solución de las tres tiradas tiene una probabilidad del 20.84%, esa es la probabilidad de que esquives a treses, derribes a dos dados a ese jugador que ni placa ni esquiva y 
+				le rompas la armadura.</p>
+			</div>
+		</div>
+
+		<div style="clear:both;"><p>Si dispongo de reroll para la jugada lo puedo seleccionar en el selector específico de reroll, el valor se recalcula sobre la marcha al cambiar la selección.</p></div>
+		
+		<div>
+			<div class="sidebyside"><img src="assets/helpScreens/screen2.png"></div>
+			<div class="sidebyside">
+				<p class="comentario">Puedes ver cómo si aplicas la reroll, la jugada de antes se convierte a un 32.41% de posibilidades, el sistema ya es consciente de que no puede usar la reroll sobre las tiradas de 
+				dos dados</p>
+			</div>
+		</div>
+	  </div>
+
+	  <div class="grupoDados">
+	    <h5>Gestionar tiradas dentro de una jugada: Borrar tiradas, marcarlas como repetibles y enlazarlas</h5>
+		<p>Conforme se van añadiendo tiradas de dados a la jugada, se van visualizando en la parte inferior de la pantalla, en esa sección se puede hacer click sobre los dados para abrir una ventana que me permite 
+		modificar esa tirada en particular, en esa ventana podemos borrar la tirada de nuestra jugada pulsando el botón borrar.</p>
+		
+		<div>
+			<div class="sidebyside"><img src="assets/helpScreens/screen3.png"></div>
+			<div class="sidebyside"><img src="assets/helpScreens/screen4.png"></div>
+			<div class="sidebyside"><img src="assets/helpScreens/screen5.png"></div>
+			<div class="sidebyside">
+				<p class="comentario">Aquí hemos creado una tirada en la que queremos calcular la probabilidad de coger el balón a 3 o más y luego esquivar a 4 o más, pero nos hemos equivocado y luego hemos añadido 
+				una tirada de 5 o más que no necesitamos, para borrarla hacemos click sobre ella y luego pulsamos el botón borrar.</p>
+			</div>
+		</div>
+
+		<div style="clear:both;">
+			<p>Cuando tengamos que identificar que una tirada es repetible (porque disponemos de una habilidad que nos permite repetirla sin recurrir a reroll) podemos marcarlo en la ventana en cuestión, al marcar o 
+			desmarcar la repetibilidad de una tirada se recalculan los porcentajes sobre la marcha.</p>
+		</div>
+		
+		<div>
+			<div class="sidebyside"><img src="assets/helpScreens/screen6.png"></div>
+			<div class="sidebyside">
+				<p class="comentario">Ahora seleccionamos la tirada de esquivar a 4 o más y la marcamos como repetible, porque tenemos la habilidad de esquivar. Cuando cerramos la ventana el sistema ya ha recalculado 
+				las posibilidades automáticamente</p>
+			</div>
+		</div>
+
+		<div style="clear:both;">
+			<p>Si dos tiradas son repetibles pero están vinculadas, por ejemplo, dos tiradas de esquivar en la misma jugada en las que tenemos la habilidad de esquivar, pueden vincularse ambas tiradas desde la ventana de 
+			edición de cada tirada, marcando primero que son ambas repetibles, y seleccionando después aquellas tiradas que son repetibles. Cuando se están vinculando tiradas, la tirada en curso, y aquellas a las que 
+			se vincula, aparecen con borde rojo, otras tiradas repetibles, pero a las que no está vinculada la tirada en curso, aparecen con borde azul. Cada operación de vinculación/desvinculación hace que la probabilidad 
+			de las tiradas se recalculen sobre la marcha. Cuando hay reroll y varias tiradas vinculadas repetibles el sistema tiene en cuenta la probabilidad de gastar la repetición en cada tirada y poder tener que utilizar 
+			la reroll en las siguientes.</p>
+		</div>
+		
+		<div>
+			<div class="sidebyside"><img src="assets/helpScreens/screen7.png"></div>
+			<div class="sidebyside">
+				<p class="comentario">Imaginemos ahora que en nuestra tirada, el primer 3 o más fuera de otra tirada de esquivar consecutiva en la misma jugada, como ambas son tiradas de esquivar, nuestra repetición 
+				por tener la habilidad esquivar sólo puede aplicarse a una de ellas, para que el sistema tenga esto en cuenta, ambas tiradas deben vincularse, al hacer click en la tirada de 3 o más y marcarla como 
+				repetible nos sale la lista del resto de tiradas repetibles de nuestra jugada actual. Vemos en rojo el 3 o más, que es la que estamos editando y en azul el 4 o más, que es repetible y aún no está enlazada 
+				con ninguna otra tirada. Si ahora marcamos el 4 o más, se pone en rojo, y el sistema	pasa a tener en cuenta para el cálculo de posibilidades que ambas tiradas se pueden repetir, pero si una se repite la 
+				otra no puede hacerlo.</p>
+			</div>
+		</div>
+		
+		<div style="clear:both;">
+			<p>Cuando se borra una tirada enlazada, o se desmarca como repetible, todo el cálculo tiene en cuenta los efectos de dicho cambio y se recalcula desde cero</p>
+		</div>
+		
+	  </div>
+	  
+	   <a href="index.html"><button class="btn btn-secondary right" id="help">Volver</button></a>
+	</div>
+  </div>
+</body>
+</html>
